@@ -1,0 +1,54 @@
+/* Páginas de obrigado (/obrigado/*): mesma estrutura do CasaMOP, identidade Le'Kéfir */
+:root {
+  --ty-bg: #F6F0E8; --ty-surface: #FFFDF9; --ty-sand: #EDE3D6;
+  --ty-accent: #3E6B48; --ty-accent-soft: #E7EFE4;
+  --ty-gold: #B8914A; --ty-gold-1: #D9B46A; --ty-gold-2: #A37B35;
+  --ty-ink: #1A1917; --ty-muted: #6F675E; --ty-border: #E2D6C6; --ty-footer: #1C1B19;
+  --ty-display: 'Playfair Display', Georgia, serif;
+  --ty-body: 'Montserrat', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body.ty-page { margin: 0; min-height: 100vh; display: flex; flex-direction: column; color: var(--ty-ink); background: var(--ty-bg); font-family: var(--ty-body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.ty-header { width: 100%; max-width: 1240px; margin: 0 auto; padding: 25px 30px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.ty-logo img { display: block; width: 150px; height: auto; }
+.ty-secure { display: inline-flex; align-items: center; gap: 8px; color: var(--ty-muted); font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+.ty-secure svg { width: 18px; height: 18px; color: var(--ty-accent); }
+.ty-main { width: 100%; flex: 1; display: flex; align-items: center; }
+.ty-hero { width: 100%; max-width: 1240px; margin: auto; padding: 35px 30px 75px; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 55px; }
+.ty-badge { width: 60px; height: 60px; margin-bottom: 23px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--ty-accent); background: var(--ty-accent-soft); }
+.ty-badge--approved { color: #fff; background: var(--ty-accent); box-shadow: 0 13px 30px rgba(62, 107, 72, .3); }
+.ty-badge svg { width: 30px; height: 30px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ty-eyebrow { margin: 0 0 13px; color: var(--ty-accent); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.ty-copy h1 { max-width: 650px; margin: 0; font-family: var(--ty-display); font-size: clamp(36px, 4.2vw, 54px); font-weight: 500; line-height: 1.1; letter-spacing: -.01em; }
+.ty-copy h1 em { color: var(--ty-accent); font-style: italic; }
+.ty-lead { max-width: 610px; margin: 19px 0 30px; color: var(--ty-muted); font-size: 16px; line-height: 1.7; }
+.ty-steps { margin: 0 0 26px; padding: 0; display: grid; gap: 13px; list-style: none; }
+.ty-steps li { display: flex; align-items: flex-start; gap: 15px; padding: 16px 18px; border: 1px solid var(--ty-border); border-radius: 14px; background: var(--ty-surface); box-shadow: 0 8px 25px rgba(60, 45, 25, .05); }
+.ty-step-number { width: 38px; height: 38px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; background: var(--ty-accent); font-family: var(--ty-display); font-size: 15px; }
+.ty-steps strong { display: block; margin-top: 1px; font-size: 14px; }
+.ty-steps p { margin: 5px 0 0; color: var(--ty-muted); font-size: 13px; line-height: 1.55; }
+.ty-note { margin: 0 0 25px; padding: 13px 16px; border-left: 3px solid var(--ty-gold); border-radius: 0 10px 10px 0; color: var(--ty-ink); background: var(--ty-surface); font-size: 13px; line-height: 1.55; }
+.ty-cta { min-height: 54px; width: fit-content; max-width: 100%; padding: 14px 26px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; border-radius: 999px; color: #1F1608; background: linear-gradient(135deg, var(--ty-gold-1), var(--ty-gold) 55%, var(--ty-gold-2)); box-shadow: 0 12px 28px -10px rgba(163, 123, 53, .7); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-align: center; text-decoration: none; transition: transform .2s, filter .2s; }
+.ty-cta:hover { filter: brightness(1.06); transform: translateY(-2px); }
+.ty-cta svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.ty-social { margin-top: 22px; display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ty-muted); }
+.ty-social a { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--ty-border); color: var(--ty-accent); background: var(--ty-surface); }
+.ty-social a:hover { border-color: var(--ty-gold); }
+.ty-social svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.ty-visual { min-width: 0; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: radial-gradient(circle, var(--ty-sand) 0%, var(--ty-bg) 72%); }
+.ty-visual img { display: block; width: min(84%, 470px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; box-shadow: 0 30px 60px -30px rgba(60, 45, 25, .45); }
+.ty-footer { margin-top: auto; padding: 22px; color: rgba(255, 255, 255, .7); background: var(--ty-footer); font-size: 11px; text-align: center; letter-spacing: .04em; }
+@media (max-width: 860px) {
+  .ty-header { padding: 20px 18px; }
+  .ty-logo img { width: 124px; }
+  .ty-hero { padding: 8px 18px 48px; grid-template-columns: 1fr; gap: 21px; }
+  .ty-visual { order: -1; max-width: 340px; width: 100%; max-height: 260px; margin: 0 auto; aspect-ratio: 1.3 / 1; }
+  .ty-visual { aspect-ratio: auto; max-height: none; background: none; }
+  .ty-visual img { width: min(62%, 220px); }
+  .ty-copy h1 { font-size: clamp(30px, 8vw, 40px); }
+  .ty-lead { font-size: 14px; margin-bottom: 24px; }
+  .ty-cta { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }

@@ -8,8 +8,8 @@ window.LP_CONFIG = {
   whatsapp: '',
   whatsappMessage: 'Olá! Tenho interesse no Créatif Redutor Le\'Kéfir.',
 
-  // Meta Pixel (deixe vazio para desativar)
-  metaPixelId: '',
+  // Meta Pixel: o código base (ID 1695981177438635) está no <head> do index.html
+  // e no data-pixel das páginas /obrigado.
 
   // Frete e parcelamento exibidos nos cards
   freteGratis: true,

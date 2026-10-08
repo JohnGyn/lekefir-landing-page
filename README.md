@@ -19,9 +19,24 @@ python3 -m http.server 4321 --directory Site   # ver localmente em http://localh
 - Os parâmetros `utm_*` e `fbclid` da URL são repassados automaticamente ao checkout.
 - O pixel dispara `PageView` e `InitiateCheckout` no clique de cada oferta.
 
+## Páginas de obrigado (URLs de retorno na Braip)
+
+| Situação | URL |
+|---|---|
+| Pagamento aprovado (dispara **Purchase**) | `https://lekefir.vercel.app/obrigado/` |
+| Pix gerado | `https://lekefir.vercel.app/obrigado/pix/` |
+| Boleto gerado | `https://lekefir.vercel.app/obrigado/boleto/` |
+| Em processamento | `https://lekefir.vercel.app/obrigado/processando/` |
+
+O Purchase usa o valor de `?value=` (ou `?valor=`) se a Braip repassar esse parâmetro, e não dispara de novo se a pessoa recarregar a página.
+
+## Meta Pixel
+
+ID `1695981177438635`. O código base fica no `<head>` do `index.html` e no `data-pixel` das páginas `/obrigado`. Eventos: `PageView` (todas as páginas), `InitiateCheckout` (clique em "Comprar agora") e `Purchase` (só em `/obrigado/`).
+
 ## Pendências (v1 → v2)
 
-- [ ] Preço de 2 unidades e do Kit · links da Braip · WhatsApp · CNPJ
+- [ ] Preço de 2 unidades e do Kit · links da Braip · WhatsApp (também ativa o botão de suporte nas páginas de obrigado) · CNPJ
 - [ ] Confirmar frete grátis, parcelamento em 12× e o "De R$ 591" do card de 3 unidades
 - [ ] Autorização do Studio 761 para o vídeo de antes e depois
 - [ ] Composição do rótulo (pedido da cliente)

@@ -94,16 +94,11 @@
     addEventListener('scroll', update, { passive: true })
   }
 
-  // ---------- Meta Pixel ----------
-  if (C.metaPixelId) {
-    /* eslint-disable */
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    /* eslint-enable */
-    fbq('init', C.metaPixelId)
-    fbq('track', 'PageView')
+  // ---------- Meta Pixel: o código base fica no <head> do index.html ----------
+  if (typeof window.fbq === 'function') {
     $$('[data-offer]').forEach((a) => a.addEventListener('click', () => {
       const o = C.ofertas.find((x) => x.id === a.dataset.offer)
-      fbq('track', 'InitiateCheckout', { content_name: o.titulo, value: o.preco || 0, currency: 'BRL' })
+      fbq('track', 'InitiateCheckout', { content_name: o.titulo, currency: 'BRL', ...(o.preco ? { value: o.preco } : {}) })
     }))
   }
 })()
