@@ -23,7 +23,7 @@
     offersEl.innerHTML = C.ofertas.map((o) => {
       const featured = o.destaque === 'MAIS VENDIDO'
       const hasPrice = typeof o.preco === 'number'
-      const perApp = hasPrice ? o.preco / (o.frascos * C.aplicacoesPorFrasco) : null
+      const perApp = hasPrice && o.incluirCustoPorAplicacao !== false ? o.preco / (o.frascos * C.aplicacoesPorFrasco) : null
       const perUnit = hasPrice && o.frascos > 1 ? o.preco / o.frascos : null
       const href = withTracking(o.checkout) || waLink(`${C.whatsappMessage} Quero: ${o.titulo}.`) || '#'
       const external = href.startsWith('http')
@@ -35,7 +35,7 @@
           <p class="offer__sub">${o.subtitulo}</p>
           ${hasPrice ? `
             ${o.precoDe ? `<p class="offer__from">De R$ ${brl(o.precoDe)}</p>` : '<p class="offer__from offer__from--empty" aria-hidden="true">&nbsp;</p>'}
-            <p class="offer__price"><small>R$</small> ${brl(o.preco)}</p>
+            <a class="offer__price" href="${href}" data-offer="${o.id}" aria-label="Comprar ${o.titulo} por R$ ${brl(o.preco)}" ${external ? 'target="_blank" rel="noopener"' : ''}><small>R$</small> ${brl(o.preco)}</a>
             <p class="offer__inst">ou em até ${C.parcelas}x no cartão</p>
             ${perUnit ? `<span class="offer__per">Cada frasco sai por R$ ${brl(perUnit)}</span>` : ''}
             ${perApp ? `<span class="offer__per">R$ ${brl(perApp)} por aplicação</span>` : ''}

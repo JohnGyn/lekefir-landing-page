@@ -1,9 +1,9 @@
 # Landing Page: Le'Kéfir Créatif Redutor (v1)
 
-Página estática (HTML, CSS e JS puros, sem build). Para publicar na VPS, basta copiar a pasta `Site/` inteira (5,4 MB).
+Página estática (HTML, CSS e JS puros, sem build). Para publicar na VPS, basta copiar o conteúdo desta pasta.
 
 ```bash
-python3 -m http.server 4321 --directory Site   # ver localmente em http://localhost:4321
+python3 -m http.server 4321   # ver localmente em http://localhost:4321
 ```
 
 ## Onde editar
@@ -36,7 +36,7 @@ ID `1695981177438635`. O código base fica no `<head>` do `index.html` e no `dat
 
 ## Pendências (v1 → v2)
 
-- [ ] Preço de 2 unidades e do Kit · links da Braip · WhatsApp (também ativa o botão de suporte nas páginas de obrigado) · CNPJ
+- [ ] CNPJ
 - [ ] Confirmar frete grátis, parcelamento em 12× e o "De R$ 591" do card de 3 unidades
 - [ ] Autorização do Studio 761 para o vídeo de antes e depois
 - [ ] Composição do rótulo (pedido da cliente)

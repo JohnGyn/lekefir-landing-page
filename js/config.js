@@ -5,8 +5,8 @@
 // ============================================================
 window.LP_CONFIG = {
   // Número com DDI e DDD, só dígitos. Ex.: '5562999999999'. Vazio esconde o botão.
-  whatsapp: '',
-  whatsappMessage: 'Olá! Tenho interesse no Créatif Redutor Le\'Kéfir.',
+  whatsapp: '5519992061661',
+  whatsappMessage: 'Olá! Vim pelo site da Le\'Kéfir e gostaria de mais informações sobre o Créatif Redutor.',
 
   // Meta Pixel: o código base (ID 1695981177438635) está no <head> do index.html
   // e no data-pixel das páginas /obrigado.
@@ -27,7 +27,7 @@ window.LP_CONFIG = {
       frascos: 1,
       preco: 197,
       precoDe: null,
-      checkout: '',
+      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/plamn8gg/che74jkx',
     },
     {
       id: 'un2',
@@ -35,9 +35,9 @@ window.LP_CONFIG = {
       subtitulo: '2 frascos 1L · até 30 aplicações',
       imagem: 'assets/img/offer-2.webp',
       frascos: 2,
-      preco: null, // ⚠️ aguardando a cliente
+      preco: 297,
       precoDe: null,
-      checkout: '',
+      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/pla98kg4/che74jkx',
     },
     {
       id: 'un3',
@@ -47,19 +47,32 @@ window.LP_CONFIG = {
       frascos: 3,
       preco: 397,
       precoDe: 591,
-      checkout: '',
+      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/pla89re1/che74jkx',
       destaque: 'MAIS VENDIDO',
     },
     {
-      id: 'kit',
-      titulo: 'Kit Tratamento Completo',
+      id: 'kit-duo',
+      titulo: 'Kit Duo',
       subtitulo: 'Créatif Redutor 1L + Shampoo Antirresíduo 1L',
       imagem: 'assets/img/offer-kit.webp',
       frascos: 1,
-      preco: null, // ⚠️ aguardando a cliente
+      preco: 297,
       precoDe: null,
-      checkout: '',
+      checkout: 'https://ev.braip.com/checkout/plaq4yvl/che74jkx?currency=BRL',
+      destaque: 'KIT DUO',
+      incluirCustoPorAplicacao: false,
+    },
+    {
+      id: 'kit-completo',
+      titulo: 'Kit Completo',
+      subtitulo: 'Créatif Redutor 1L + Shampoo Antirresíduo 1L + Lisse Térmico 120ml',
+      imagem: 'assets/img/offer-complete.webp',
+      frascos: 1,
+      preco: 327,
+      precoDe: null,
+      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/plae60y6/che74jkx',
       destaque: 'KIT COMPLETO',
+      incluirCustoPorAplicacao: false,
     },
   ],
 
