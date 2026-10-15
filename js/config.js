@@ -27,7 +27,7 @@ window.LP_CONFIG = {
       frascos: 1,
       preco: 197,
       precoDe: null,
-      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/plamn8gg/che74jkx',
+      checkout: 'https://ev.braip.com/checkout/plamn8gg/che74jkx?currency=BRL',
     },
     {
       id: 'un2',
@@ -37,7 +37,7 @@ window.LP_CONFIG = {
       frascos: 2,
       preco: 297,
       precoDe: null,
-      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/pla98kg4/che74jkx',
+      checkout: 'https://ev.braip.com/checkout/pla98kg4/che74jkx?currency=BRL',
     },
     {
       id: 'un3',
@@ -47,7 +47,7 @@ window.LP_CONFIG = {
       frascos: 3,
       preco: 397,
       precoDe: 591,
-      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/pla89re1/che74jkx',
+      checkout: 'https://ev.braip.com/checkout/pla89re1/che74jkx?currency=BRL',
       destaque: 'MAIS VENDIDO',
     },
     {
@@ -70,7 +70,7 @@ window.LP_CONFIG = {
       frascos: 1,
       preco: 327,
       precoDe: null,
-      checkout: 'https://ev.braip.com/checkout/pro53znm/pre-visualizacao/plae60y6/che74jkx',
+      checkout: 'https://ev.braip.com/checkout/plae60y6/che74jkx?currency=BRL',
       destaque: 'KIT COMPLETO',
       incluirCustoPorAplicacao: false,
     },
